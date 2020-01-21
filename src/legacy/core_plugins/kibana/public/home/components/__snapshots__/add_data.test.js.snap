@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+// THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+// This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+// Copyright 2019 LogRhythm, Inc
+// Licensed under the LogRhythm Global End User License Agreement,
+// which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+
 exports[`apmUiEnabled 1`] = `
 <EuiPanel
   grow={true}
@@ -11,7 +17,7 @@ exports[`apmUiEnabled 1`] = `
       <EuiTitle>
         <h2>
           <FormattedMessage
-            defaultMessage="Add Data to Kibana"
+            defaultMessage="Add Data to NetMon"
             id="kbn.home.addData.addDataToKibanaTitle"
             values={Object {}}
           />
@@ -242,7 +248,7 @@ exports[`apmUiEnabled 1`] = `
           type="button"
         >
           <FormattedMessage
-            defaultMessage="Load a data set and a Kibana dashboard"
+            defaultMessage="Load a data set and a NetMon dashboard"
             id="kbn.home.addData.sampleDataLink"
             values={Object {}}
           />
@@ -302,7 +308,7 @@ exports[`isNewKibanaInstance 1`] = `
       <EuiTitle>
         <h2>
           <FormattedMessage
-            defaultMessage="Add Data to Kibana"
+            defaultMessage="Add Data to NetMon"
             id="kbn.home.addData.addDataToKibanaTitle"
             values={Object {}}
           />
@@ -491,7 +497,7 @@ exports[`isNewKibanaInstance 1`] = `
           type="button"
         >
           <FormattedMessage
-            defaultMessage="Load a data set and a Kibana dashboard"
+            defaultMessage="Load a data set and a NetMon dashboard"
             id="kbn.home.addData.sampleDataLink"
             values={Object {}}
           />
@@ -551,7 +557,7 @@ exports[`mlEnabled 1`] = `
       <EuiTitle>
         <h2>
           <FormattedMessage
-            defaultMessage="Add Data to Kibana"
+            defaultMessage="Add Data to NetMon"
             id="kbn.home.addData.addDataToKibanaTitle"
             values={Object {}}
           />
@@ -782,7 +788,7 @@ exports[`mlEnabled 1`] = `
           type="button"
         >
           <FormattedMessage
-            defaultMessage="Load a data set and a Kibana dashboard"
+            defaultMessage="Load a data set and a NetMon dashboard"
             id="kbn.home.addData.sampleDataLink"
             values={Object {}}
           />
@@ -880,7 +886,7 @@ exports[`render 1`] = `
       <EuiTitle>
         <h2>
           <FormattedMessage
-            defaultMessage="Add Data to Kibana"
+            defaultMessage="Add Data to NetMon"
             id="kbn.home.addData.addDataToKibanaTitle"
             values={Object {}}
           />
@@ -1069,7 +1075,7 @@ exports[`render 1`] = `
           type="button"
         >
           <FormattedMessage
-            defaultMessage="Load a data set and a Kibana dashboard"
+            defaultMessage="Load a data set and a NetMon dashboard"
             id="kbn.home.addData.sampleDataLink"
             values={Object {}}
           />

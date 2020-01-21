@@ -45,6 +45,27 @@ export type OnDataProviderEdited = ({
   value: string | number;
 }) => void;
 
+/** Invoked when a user edits the properties of a data provider */
+export type OnDataProviderEdited = (
+  {
+    andProviderId,
+    excluded,
+    field,
+    id,
+    operator,
+    providerId,
+    value,
+  }: {
+    andProviderId?: string;
+    excluded: boolean;
+    field: string;
+    id: string;
+    operator: QueryOperator;
+    providerId: string;
+    value: string | number;
+  }
+) => void;
+
 /** Invoked when a user change the kql query of our data provider */
 export type OnChangeDataProviderKqlQuery = (edit: { providerId: string; kqlQuery: string }) => void;
 

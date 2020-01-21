@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,7 +26,7 @@
  * under the License.
  */
 
-import { EuiIcon, EuiSideNav, IconType } from '@elastic/eui';
+import { EuiSideNav, IconType } from '@elastic/eui';
 import { FormattedMessage } from '@kbn/i18n/react';
 import React from 'react';
 import { IndexedArray } from 'ui/indexed_array';
@@ -35,10 +44,10 @@ interface Section extends Subsection {
 }
 
 const sectionVisible = (section: Subsection) => !section.disabled && section.visible;
-const sectionToNav = (selectedId: string) => ({ display, id, url, icon }: Subsection) => ({
+const sectionToNav = (selectedId: string) => ({ display, id, url }: Subsection) => ({
   id,
   name: display,
-  icon: icon ? <EuiIcon type={icon} /> : null,
+  icon: null,
   isSelected: selectedId === id,
   href: url,
   'data-test-subj': id,

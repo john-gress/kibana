@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -109,13 +118,13 @@ class DashboardListingUi extends React.Component {
               <p>
                 <FormattedMessage
                   id="kbn.dashboard.listing.createNewDashboard.combineDataViewFromKibanaAppDescription"
-                  defaultMessage="You can combine data views from any Kibana app into one dashboard and see everything in one place."
+                  defaultMessage="You can combine data views from any NetMon-UI app into one dashboard and see everything in one place."
                 />
               </p>
               <p>
                 <FormattedMessage
                   id="kbn.dashboard.listing.createNewDashboard.newToKibanaDescription"
-                  defaultMessage="New to Kibana? {sampleDataInstallLink} to take a test drive."
+                  defaultMessage="New to NetMon-UI? {sampleDataInstallLink} to take a test drive."
                   values={{
                     sampleDataInstallLink: (
                       <EuiLink href="#/home/tutorial_directory/sampleData">

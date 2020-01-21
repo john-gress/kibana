@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -34,10 +43,11 @@ export default function (chrome, internals) {
     internals.appUrlStore.removeItem(verifySessionStorage);
   } catch (error) {
     throw new Error(
-      'Kibana requires access to sessionStorage, and it looks like ' +
+      'NetMon-UI requires access to sessionStorage, and it looks like ' +
       'your browser is restricting it. If you\'re ' +
       'using Safari with private browsing enabled, you can solve this ' +
-      'problem by disabling private browsing, or by using another browser.');
+      'problem by disabling private browsing, or by using another browser.'
+    );
   }
 
   /**

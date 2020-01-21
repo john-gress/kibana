@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -49,7 +58,7 @@ export const CreateIndexPatternPrompt = ({ onClose }: { onClose: () => void }) =
           <FormattedMessage
             id="kbn.management.indexPatternPrompt.subtitle"
             defaultMessage="Index patterns allow you to bucket disparate data sources together so their shared fields may be queried in
-          Kibana."
+            NetMon-UI."
           />
         </p>
       </EuiText>

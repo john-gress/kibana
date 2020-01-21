@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -41,11 +50,11 @@ export const CallOuts = () => {
           <FormattedMessage
             id="kbn.management.settings.callOutCautionDescription"
             defaultMessage="Be careful in here, these settings are for very advanced users only.
-            Tweaks you make here can break large portions of Kibana.
+            Tweaks you make here can break large portions of NetMon-UI.
             Some of these settings may be undocumented, unsupported or experimental.
             If a field has a default value, blanking the field will reset it to its default which may be
             unacceptable given other configuration directives.
-            Deleting a custom setting will permanently remove it from Kibana&apos;s config."
+            Deleting a custom setting will permanently remove it from NetMon-UI&apos;s config."
           />
         </p>
       </EuiCallOut>

@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -163,7 +172,7 @@ Make sure the file exists at that location.',
         } else {
           errorMessage = i18n.translate('regionMap.choroplethLayer.downloadingVectorDataErrorMessage', {
             defaultMessage: 'Cannot download {name} file. Please ensure the \
-CORS configuration of the server permits requests from the Kibana application on this host.',
+CORS configuration of the server permits requests from the NetMon-UI application on this host.',
             values: { name: name },
           });
         }

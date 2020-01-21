@@ -1,3 +1,12 @@
+<!--
+  THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+  This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+
+  Copyright 2019 LogRhythm, Inc
+  Licensed under the LogRhythm Global End User License Agreement,
+  which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+-->
+
 <div class="app-container kbnError--multi-allow-explicit-index euiText">
   <h3>
     <icon aria-hidden="true" type="'alert'" color="'danger'"></icon>
@@ -11,7 +20,7 @@
     i18n-id="common.ui.errorAllowExplicitIndex.errorDescription"
     i18n-default-message="It looks like your Elasticsearch cluster has the
     {allowExplicitIndexConfig} setting set to {allowExplicitIndexValue}, which
-    prevents Kibana from making search requests. We use this ability to send a single request to
+    prevents NetMon-UI from making search requests. We use this ability to send a single request to
     Elasticsearch that searches multiple indexes so that when there are many panels on a dashboard
     they will load quickly and uniformly."
     i18n-values="{
@@ -22,7 +31,7 @@
 
   <p
     i18n-id="common.ui.errorAllowExplicitIndex.errorDisclaimer"
-    i18n-default-message="Unfortunately, until this issue is fixed you won't be able to use certain apps in Kibana, like
+    i18n-default-message="Unfortunately, until this issue is fixed you won't be able to use certain apps in NetMon-UI, like
     Discover, Visualize and Dashboard."
   ></p>
 

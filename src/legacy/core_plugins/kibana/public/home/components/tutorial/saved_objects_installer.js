@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -37,7 +46,7 @@ import {
 class SavedObjectsInstallerUi extends React.Component {
   DEFAULT_BUTTON_LABEL = this.props.intl.formatMessage({
     id: 'kbn.home.tutorial.savedObject.defaultButtonLabel',
-    defaultMessage: 'Load Kibana objects'
+    defaultMessage: 'Load NetMon-UI objects'
   });
 
   state = {
@@ -176,7 +185,7 @@ Click \'Confirm overwrite\' to import and overwrite existing objects. Any change
     );
 
     return {
-      title: this.props.intl.formatMessage({ id: 'kbn.home.tutorial.savedObject.loadTitle', defaultMessage: 'Load Kibana objects' }),
+      title: this.props.intl.formatMessage({ id: 'kbn.home.tutorial.savedObject.loadTitle', defaultMessage: 'Load NetMon-UI objects' }),
       status: this.state.isInstalled ? 'complete' : 'incomplete',
       children: installStep,
       key: 'installStep'

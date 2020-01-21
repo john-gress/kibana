@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -147,7 +156,7 @@ class TutorialDirectoryUi extends React.Component {
       }),
       description: this.props.intl.formatMessage({
         id: 'kbn.home.tutorial.card.sampleDataDescription',
-        defaultMessage: 'Get started exploring Kibana with these "one click" data sets.',
+        defaultMessage: 'Get started exploring NetMon-UI with these "one click" data sets.'
       }),
       url: this.props.addBasePath('#/home/tutorial_directory/sampleData'),
       elasticCloud: true,
@@ -229,7 +238,7 @@ class TutorialDirectoryUi extends React.Component {
             <h1>
               <FormattedMessage
                 id="kbn.home.tutorial.addDataToKibanaTitle"
-                defaultMessage="Add Data to Kibana"
+                defaultMessage="Add Data to NetMon"
               />
             </h1>
           </EuiTitle>

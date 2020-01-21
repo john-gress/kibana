@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
   * Licensed to Elasticsearch B.V. under one or more contributor
   * license agreements. See the NOTICE file distributed with
   * this work for additional information regarding copyright
@@ -45,11 +54,11 @@ export const createZoomWarningMsg = (function () {
             <FormattedMessage
               id="common.ui.vis.kibanaMap.zoomWarning"
               defaultMessage="You've reached the maximum number of zoom
-              levels. To zoom all the way in, upgrade to the
-              {defaultDistribution} of Elasticsearch and Kibana. You'll get
-              access to additional zoom levels for free through the {ems}.
-              Or, you can configure your own map server. Please go to
-              { wms } or { configSettings} for more information."
+               levels. To zoom all the way in, upgrade to the
+               {defaultDistribution} of Elasticsearch and NetMon-UI. You'll get
+               access to additional zoom levels for free through the {ems}.
+               Or, you can configure your own map server. Please go to
+               { wms } or { configSettings} for more information."
               values={{
                 defaultDistribution: (
                   <a

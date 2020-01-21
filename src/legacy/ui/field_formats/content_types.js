@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,6 +29,7 @@
 import _ from 'lodash';
 import { asPrettyString } from '../../core_plugins/kibana/common/utils/as_pretty_string';
 import { getHighlightHtml } from '../../core_plugins/kibana/common/highlight/highlight_html';
+import { shouldBindFormat } from '../../../netmon/field_formats/should_bind_format';
 
 const types = {
   html: function (format, convert) {
@@ -43,6 +53,9 @@ const types = {
     }
 
     return function (...args) {
+      if(!!args[1] && shouldBindFormat(args[1].name)) {
+        return `<span>${recurse(...args)}</span>`;
+      }
       return `<span ng-non-bindable>${recurse(...args)}</span>`;
     };
   },

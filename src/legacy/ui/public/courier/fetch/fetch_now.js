@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,6 +32,12 @@ import { CallResponseHandlersProvider } from './call_response_handlers';
 import { ContinueIncompleteProvider } from './continue_incomplete';
 import { RequestStatus } from './req_status';
 import { i18n } from '@kbn/i18n';
+
+import _ from 'lodash';
+import moment from 'moment';
+import { auditSearch } from '@logrhythm/nm-web-shared/services/audit';
+
+const auditTimeFormat = 'YYYY/MM/DD HH:mm:ss';
 
 /**
  * Fetch now provider should be used if you want the results searched and returned immediately.
@@ -106,7 +121,55 @@ export function FetchNowProvider(Private, Promise) {
       });
   }
 
+  async function auditFetch(searchSource) {
+    const searchSourceFields = searchSource.getFields();
+
+    let queryToAudit = '';
+    let queryVal;
+    if(Array.isArray(searchSourceFields.query)) {
+      queryVal = searchSourceFields.query[searchSourceFields.query.length - 1].query || '';
+    } else {
+      queryVal = searchSourceFields.query.query || '';
+    }
+
+    if(queryVal) {
+      queryToAudit = typeof queryVal === 'string' ? queryVal : _.get(queryVal, 'query_string.query', '');
+    }
+
+    const fields = searchSource.getParent().getFields();
+    const filter = fields && typeof fields.filter === 'function' ? fields.filter() : null;
+    const dateFilter = filter ? Object.values(searchSource.getParent().getFields().filter().range)[0] : null;
+
+    if (
+      !queryToAudit ||
+      queryToAudit.trim() === '*' ||
+      !dateFilter ||
+      !dateFilter.gte ||
+      !dateFilter.lte
+    ) {
+      return;
+    }
+
+    const formattedFrom = moment(dateFilter.gte).format(auditTimeFormat);
+    const formattedTo = moment(dateFilter.lte).format(auditTimeFormat);
+
+    await auditSearch({
+      query: queryToAudit,
+      from: formattedFrom,
+      to: formattedTo
+    });
+  }
+
   function startRequests(searchRequests) {
+    if(searchRequests.length > 0) {
+      try {
+        auditFetch(searchRequests[0].source)
+          .catch(err => console.warn('An error occurred trying to audit the query.', err)); // eslint-disable-line
+      } catch (err) {
+        console.warn('An error occurred trying to audit the query.', err); // eslint-disable-line
+      }
+    }
+
     return Promise.map(searchRequests, function (searchRequest) {
       if (searchRequest === ABORTED) {
         return searchRequest;

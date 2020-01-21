@@ -27,6 +27,7 @@ import * as i18n from '../translations';
 const BasicTable = styled(EuiBasicTable)`
   .euiTableCellContent {
     animation: none;
+    text-align: left;
   }
 `;
 

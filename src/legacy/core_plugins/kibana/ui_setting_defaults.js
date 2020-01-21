@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -408,7 +417,7 @@ export function getUiSettingDefaults() {
       type: 'number',
       description: i18n.translate('kbn.advancedSettings.courier.maxRequestsText', {
         defaultMessage:
-          'Controls the {maxRequestsLink} setting used for _msearch requests sent by Kibana. ' +
+          'Controls the {maxRequestsLink} setting used for _msearch requests sent by NetMon-UI. ' +
           'Set to 0 to disable this config and use the Elasticsearch default.',
         values: {
           maxRequestsLink:
@@ -820,7 +829,7 @@ export function getUiSettingDefaults() {
 }`,
       type: 'json',
       description: i18n.translate('kbn.advancedSettings.timepicker.timeDefaultsText', {
-        defaultMessage: 'The timefilter selection to use when Kibana is started without one',
+        defaultMessage: 'The timefilter selection to use when NetMon-UI is started without one',
       }),
       requiresPageReload: true,
     },
@@ -920,7 +929,7 @@ export function getUiSettingDefaults() {
       }),
       value: false,
       description: i18n.translate('kbn.advancedSettings.darkModeText', {
-        defaultMessage: `Enable a dark mode for the Kibana UI. A page refresh is required for the setting to be applied.`,
+        defaultMessage: `Enable a dark mode for NetMon-UI. A page refresh is required for the setting to be applied.`,
       }),
       requiresPageReload: true,
     },
@@ -1099,7 +1108,7 @@ export function getUiSettingDefaults() {
       }),
       value: false,
       description: i18n.translate('kbn.advancedSettings.disableAnimationsText', {
-        defaultMessage: 'Turn off all unnecessary animations in the Kibana UI. Refresh the page to apply the changes.',
+        defaultMessage: 'Turn off all unnecessary animations in NetMon-UI. Refresh the page to apply the changes.',
       }),
       category: ['accessibility'],
       requiresPageReload: true,

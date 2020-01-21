@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,15 +35,15 @@ export function kibanaMetricsSpecProvider(server, context) {
   return {
     id: 'kibanaMetrics',
     name: i18n.translate('kbn.server.tutorials.kibanaMetrics.nameTitle', {
-      defaultMessage: 'Kibana metrics',
+      defaultMessage: 'NetMon-UI metrics',
     }),
     isBeta: false,
     category: TUTORIAL_CATEGORY.METRICS,
     shortDescription: i18n.translate('kbn.server.tutorials.kibanaMetrics.shortDescription', {
-      defaultMessage: 'Fetch internal metrics from Kibana.',
+      defaultMessage: 'Fetch internal metrics from NetMon-UI.',
     }),
     longDescription: i18n.translate('kbn.server.tutorials.kibanaMetrics.longDescription', {
-      defaultMessage: 'The `kibana` Metricbeat module fetches internal metrics from Kibana. \
+      defaultMessage: 'The `kibana` Metricbeat module fetches internal metrics from NetMon-UI. \
 [Learn more]({learnMoreLink}).',
       values: {
         learnMoreLink: '{config.docs.beats.metricbeat}/metricbeat-module-kibana.html',

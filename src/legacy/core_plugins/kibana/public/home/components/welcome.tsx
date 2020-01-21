@@ -118,7 +118,7 @@ export class Welcome extends React.PureComponent<Props, State> {
               </span>
               <EuiTitle size="l" className="homWelcome__title">
                 <h1>
-                  <FormattedMessage id="kbn.home.welcomeTitle" defaultMessage="Welcome to Kibana" />
+                  <FormattedMessage id="kbn.home.welcomeTitle" defaultMessage="Welcome to NetMon" />
                 </h1>
               </EuiTitle>
               <EuiText size="s" color="subdued" className="homWelcome__subtitle">

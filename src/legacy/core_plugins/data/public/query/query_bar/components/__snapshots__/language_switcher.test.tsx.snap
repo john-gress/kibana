@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+// THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+// This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+// Copyright 2019 LogRhythm, Inc
+// Licensed under the LogRhythm Global End User License Agreement,
+// which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+
 exports[`LanguageSwitcher should toggle off if language is lucene 1`] = `
 <EuiPopover
   anchorPosition="downRight"
@@ -45,7 +51,7 @@ exports[`LanguageSwitcher should toggle off if language is lucene 1`] = `
     <EuiText>
       <p>
         <FormattedMessage
-          defaultMessage="The {docsLink} (KQL) offers a simplified query syntax and support for scripted fields. KQL also provides autocomplete if you have a Basic license or above. If you turn off KQL, Kibana uses Lucene."
+          defaultMessage="The {docsLink} (KQL) offers a simplified query syntax and support for scripted fields. KQL also provides autocomplete if you have a Basic license or above. If you turn off KQL, NetMon-UI uses Lucene."
           id="data.query.queryBar.syntaxOptionsDescription"
           values={
             Object {
@@ -148,7 +154,7 @@ exports[`LanguageSwitcher should toggle on if language is kuery 1`] = `
     <EuiText>
       <p>
         <FormattedMessage
-          defaultMessage="The {docsLink} (KQL) offers a simplified query syntax and support for scripted fields. KQL also provides autocomplete if you have a Basic license or above. If you turn off KQL, Kibana uses Lucene."
+          defaultMessage="The {docsLink} (KQL) offers a simplified query syntax and support for scripted fields. KQL also provides autocomplete if you have a Basic license or above. If you turn off KQL, NetMon-UI uses Lucene."
           id="data.query.queryBar.syntaxOptionsDescription"
           values={
             Object {

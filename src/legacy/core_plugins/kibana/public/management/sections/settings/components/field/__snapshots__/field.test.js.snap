@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+// THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+// This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+// Copyright 2019 LogRhythm, Inc
+// Licensed under the LogRhythm Global End User License Agreement,
+// which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+
 exports[`Field for array setting should render as read only if saving is disabled 1`] = `
 <EuiFlexGroup
   className="mgtAdvancedSettings__field"
@@ -26,7 +32,7 @@ exports[`Field for array setting should render as read only if saving is disable
       title={
         <h3>
           Array test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -114,7 +120,7 @@ exports[`Field for array setting should render as read only with help text if ov
       title={
         <h3>
           Array test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -134,7 +140,7 @@ exports[`Field for array setting should render as read only with help text if ov
             size="xs"
           >
             <FormattedMessage
-              defaultMessage="This setting is overridden by the Kibana server and can not be changed."
+              defaultMessage="This setting is overridden by the NetMon-UI server and can not be changed."
               id="kbn.management.settings.field.helpText"
               values={Object {}}
             />
@@ -267,7 +273,7 @@ exports[`Field for array setting should render default value if there is no user
       title={
         <h3>
           Array test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -355,7 +361,7 @@ exports[`Field for array setting should render user value if there is user value
       title={
         <h3>
           Array test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -440,7 +446,7 @@ exports[`Field for boolean setting should render as read only if saving is disab
       title={
         <h3>
           Boolean test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -532,7 +538,7 @@ exports[`Field for boolean setting should render as read only with help text if 
       title={
         <h3>
           Boolean test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -552,7 +558,7 @@ exports[`Field for boolean setting should render as read only with help text if 
             size="xs"
           >
             <FormattedMessage
-              defaultMessage="This setting is overridden by the Kibana server and can not be changed."
+              defaultMessage="This setting is overridden by the NetMon-UI server and can not be changed."
               id="kbn.management.settings.field.helpText"
               values={Object {}}
             />
@@ -693,7 +699,7 @@ exports[`Field for boolean setting should render default value if there is no us
       title={
         <h3>
           Boolean test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -785,7 +791,7 @@ exports[`Field for boolean setting should render user value if there is user val
       title={
         <h3>
           Boolean test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -874,7 +880,7 @@ exports[`Field for image setting should render as read only if saving is disable
       title={
         <h3>
           Image test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -961,7 +967,7 @@ exports[`Field for image setting should render as read only with help text if ov
       title={
         <h3>
           Image test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -981,7 +987,7 @@ exports[`Field for image setting should render as read only with help text if ov
             size="xs"
           >
             <FormattedMessage
-              defaultMessage="This setting is overridden by the Kibana server and can not be changed."
+              defaultMessage="This setting is overridden by the NetMon-UI server and can not be changed."
               id="kbn.management.settings.field.helpText"
               values={Object {}}
             />
@@ -1110,7 +1116,7 @@ exports[`Field for image setting should render default value if there is no user
       title={
         <h3>
           Image test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -1197,7 +1203,7 @@ exports[`Field for image setting should render user value if there is user value
       title={
         <h3>
           Image test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -1320,7 +1326,7 @@ exports[`Field for json setting should render as read only if saving is disabled
       title={
         <h3>
           Json test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -1429,7 +1435,7 @@ exports[`Field for json setting should render as read only with help text if ove
       title={
         <h3>
           Json test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -1449,7 +1455,7 @@ exports[`Field for json setting should render as read only with help text if ove
             size="xs"
           >
             <FormattedMessage
-              defaultMessage="This setting is overridden by the Kibana server and can not be changed."
+              defaultMessage="This setting is overridden by the NetMon-UI server and can not be changed."
               id="kbn.management.settings.field.helpText"
               values={Object {}}
             />
@@ -1642,7 +1648,7 @@ exports[`Field for json setting should render default value if there is no user 
       title={
         <h3>
           Json test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -1770,7 +1776,7 @@ exports[`Field for json setting should render user value if there is user value 
       title={
         <h3>
           Json test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -1872,7 +1878,7 @@ exports[`Field for markdown setting should render as read only if saving is disa
       title={
         <h3>
           Markdown test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -1977,7 +1983,7 @@ exports[`Field for markdown setting should render as read only with help text if
       title={
         <h3>
           Markdown test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -1997,7 +2003,7 @@ exports[`Field for markdown setting should render as read only with help text if
             size="xs"
           >
             <FormattedMessage
-              defaultMessage="This setting is overridden by the Kibana server and can not be changed."
+              defaultMessage="This setting is overridden by the NetMon-UI server and can not be changed."
               id="kbn.management.settings.field.helpText"
               values={Object {}}
             />
@@ -2164,7 +2170,7 @@ exports[`Field for markdown setting should render default value if there is no u
       title={
         <h3>
           Markdown test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -2269,7 +2275,7 @@ exports[`Field for markdown setting should render user value if there is user va
       title={
         <h3>
           Markdown test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -2371,7 +2377,7 @@ exports[`Field for number setting should render as read only if saving is disabl
       title={
         <h3>
           Number test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -2459,7 +2465,7 @@ exports[`Field for number setting should render as read only with help text if o
       title={
         <h3>
           Number test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -2479,7 +2485,7 @@ exports[`Field for number setting should render as read only with help text if o
             size="xs"
           >
             <FormattedMessage
-              defaultMessage="This setting is overridden by the Kibana server and can not be changed."
+              defaultMessage="This setting is overridden by the NetMon-UI server and can not be changed."
               id="kbn.management.settings.field.helpText"
               values={Object {}}
             />
@@ -2612,7 +2618,7 @@ exports[`Field for number setting should render default value if there is no use
       title={
         <h3>
           Number test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -2700,7 +2706,7 @@ exports[`Field for number setting should render user value if there is user valu
       title={
         <h3>
           Number test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -2785,7 +2791,7 @@ exports[`Field for select setting should render as read only if saving is disabl
       title={
         <h3>
           Select test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -2890,7 +2896,7 @@ exports[`Field for select setting should render as read only with help text if o
       title={
         <h3>
           Select test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -2910,7 +2916,7 @@ exports[`Field for select setting should render as read only with help text if o
             size="xs"
           >
             <FormattedMessage
-              defaultMessage="This setting is overridden by the Kibana server and can not be changed."
+              defaultMessage="This setting is overridden by the NetMon-UI server and can not be changed."
               id="kbn.management.settings.field.helpText"
               values={Object {}}
             />
@@ -3077,7 +3083,7 @@ exports[`Field for select setting should render default value if there is no use
       title={
         <h3>
           Select test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -3182,7 +3188,7 @@ exports[`Field for select setting should render user value if there is user valu
       title={
         <h3>
           Select test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -3284,7 +3290,7 @@ exports[`Field for string setting should render as read only if saving is disabl
       title={
         <h3>
           String test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -3372,7 +3378,7 @@ exports[`Field for string setting should render as read only with help text if o
       title={
         <h3>
           String test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -3392,7 +3398,7 @@ exports[`Field for string setting should render as read only with help text if o
             size="xs"
           >
             <FormattedMessage
-              defaultMessage="This setting is overridden by the Kibana server and can not be changed."
+              defaultMessage="This setting is overridden by the NetMon-UI server and can not be changed."
               id="kbn.management.settings.field.helpText"
               values={Object {}}
             />
@@ -3525,7 +3531,7 @@ exports[`Field for string setting should render default value if there is no use
       title={
         <h3>
           String test setting
-          
+
         </h3>
       }
       titleSize="xs"
@@ -3613,7 +3619,7 @@ exports[`Field for string setting should render user value if there is user valu
       title={
         <h3>
           String test setting
-          
+
         </h3>
       }
       titleSize="xs"

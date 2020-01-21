@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -295,7 +304,7 @@ export function StateProvider(Private, $rootScope, $location, stateManagementCon
 
     // If we ran out of space trying to persist the state, notify the user.
     const message = i18n.translate('common.ui.stateManagement.unableToStoreHistoryInSessionErrorMessage', {
-      defaultMessage: 'Kibana is unable to store history items in your session ' +
+      defaultMessage: 'NetMon-UI is unable to store history items in your session ' +
         `because it is full and there don't seem to be items any items safe ` +
         'to delete.\n\n' +
         'This can usually be fixed by moving to a fresh tab, but could ' +

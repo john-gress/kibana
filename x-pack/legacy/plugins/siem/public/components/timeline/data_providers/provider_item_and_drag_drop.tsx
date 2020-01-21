@@ -26,6 +26,7 @@ import { DataProvider } from './data_provider';
 import { ProviderItemAnd } from './provider_item_and';
 
 import * as i18n from './translations';
+import { BrowserFields } from '../../../containers/source';
 
 const DropAndTargetDataProvidersContainer = styled(EuiFlexItem)`
   margin: 0px 8px;

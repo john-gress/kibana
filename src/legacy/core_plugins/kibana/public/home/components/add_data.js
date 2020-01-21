@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -203,7 +212,7 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl, mlEnabled }) => {
             <h2>
               <FormattedMessage
                 id="kbn.home.addData.addDataToKibanaTitle"
-                defaultMessage="Add Data to Kibana"
+                defaultMessage="Add Data to NetMon"
               />
             </h2>
           </EuiTitle>
@@ -239,7 +248,7 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl, mlEnabled }) => {
             >
               <FormattedMessage
                 id="kbn.home.addData.sampleDataLink"
-                defaultMessage="Load a data set and a Kibana dashboard"
+                defaultMessage="Load a data set and a NetMon dashboard"
               />
             </EuiLink>
           </EuiText>

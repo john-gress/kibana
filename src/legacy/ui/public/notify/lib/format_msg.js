@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -49,7 +58,7 @@ export function formatMsg(err, source) {
       // status = -1 indicates that the request was failed to reach the server
       message += i18n.translate('common.ui.notify.toaster.unavailableServerErrorMessage', {
         defaultMessage: 'An HTTP request has failed to connect. ' +
-        'Please check if the Kibana server is running and that your browser has a working connection, ' +
+        'Please check if the NetMon-UI server is running and that your browser has a working connection, ' +
         'or contact your system administrator.',
       });
     } else {

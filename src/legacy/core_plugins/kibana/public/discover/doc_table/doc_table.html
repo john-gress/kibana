@@ -1,3 +1,12 @@
+<!--
+  THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+  This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+
+  Copyright 2019 LogRhythm, Inc
+  Licensed under the LogRhythm Global End User License Agreement,
+  which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+-->
+
 <div
   class="kbnDocTable__container"
   ng-if="hits.length"
@@ -35,6 +44,8 @@
         on-change-sort-order="onChangeSortOrder"
         on-move-column="onMoveColumn"
         on-remove-column="onRemoveColumn"
+        on-select-all="onSelectAll"
+        on-select-current-page="onSelectCurrentPage"
       ></thead>
       <tbody>
         <tr ng-repeat="row in pageOfItems|limitTo:limit track by row._index+row._type+row._id+row._score+row._version+row._routing"
@@ -84,6 +95,7 @@
       on-change-sort-order="onChangeSortOrder"
       on-move-column="onMoveColumn"
       on-remove-column="onRemoveColumn"
+      on-select-all="onSelectAll"
     ></thead>
     <tbody>
       <tr ng-repeat="row in hits|limitTo:limit track by row._index+row._type+row._id+row._score+row._version+row._routing"

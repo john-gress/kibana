@@ -1,4 +1,13 @@
 /*
+ * THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+ * This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+ *
+ * Copyright 2019 LogRhythm, Inc
+ * Licensed under the LogRhythm Global End User License Agreement,
+ * which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -40,7 +49,7 @@ export const ScriptingSyntax = () => (
       <p>
         <FormattedMessage
           id="common.ui.fieldEditor.syntax.defaultLabel.defaultDetail"
-          defaultMessage="By default, Kibana scripted fields use {painless}, a simple and secure scripting language designed
+          defaultMessage="By default, NetMon-UI scripted fields use {painless}, a simple and secure scripting language designed
           specifically for use with Elasticsearch, to access values in the document use the following format:"
           values={{
             painless: (
@@ -90,14 +99,14 @@ export const ScriptingSyntax = () => (
       <p>
         <FormattedMessage
           id="common.ui.fieldEditor.syntax.kibanaLabel"
-          defaultMessage="Kibana currently imposes one special limitation on the painless scripts you write. They cannot contain named
+          defaultMessage="NetMon-UI currently imposes one special limitation on the painless scripts you write. They cannot contain named
           functions."
         />
       </p>
       <p>
         <FormattedMessage
           id="common.ui.fieldEditor.syntax.lucene.commonLabel.commonDetail"
-          defaultMessage="Coming from an older version of Kibana? The {lucene} you know and love are still available. Lucene expressions
+          defaultMessage="Coming from an older version of NetMon-UI? The {lucene} you know and love are still available. Lucene expressions
           are a lot like JavaScript, but limited to basic arithmetic, bitwise and comparison operations."
           values={{
             lucene: (
