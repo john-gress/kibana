@@ -1,3 +1,14 @@
+//  THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+//  This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+
+//  Copyright 2019 LogRhythm, Inc
+//  Licensed under the LogRhythm Global End User License Agreement,
+//  which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+
+// THIS FILE WAS CHANGED TO GET THE 7.4.2 BUILD TO WORK.
+// THE NECESSITY OF THESE CHANGES SHOULD BE RE-EVALUATED
+// WHEN UPGRADING TO THE NEXT VERSION
+
 /*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
@@ -889,7 +900,7 @@ describe('I18n engine', () => {
   describe('load', () => {
     let mockFetch: jest.Mock;
     beforeEach(() => {
-      mockFetch = jest.spyOn(global as any, 'fetch').mockImplementation();
+      mockFetch = ((jest.spyOn(global as any, 'fetch').mockImplementation() as any) as jest.Mock);
     });
 
     test('fails if server returns >= 300 status code', async () => {

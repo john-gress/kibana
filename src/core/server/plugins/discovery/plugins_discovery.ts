@@ -1,3 +1,14 @@
+//  THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+//  This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+
+//  Copyright 2019 LogRhythm, Inc
+//  Licensed under the LogRhythm Global End User License Agreement,
+//  which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+
+// THIS FILE WAS CHANGED TO GET THE 7.4.2 BUILD TO WORK.
+// THE NECESSITY OF THESE CHANGES SHOULD BE RE-EVALUATED
+// WHEN UPGRADING TO THE NEXT VERSION
+
 /*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
@@ -19,7 +30,7 @@
 
 import { readdir, stat } from 'fs';
 import { resolve } from 'path';
-import { bindNodeCallback, from, merge } from 'rxjs';
+import { bindNodeCallback, from, merge, Observable } from 'rxjs';
 import { catchError, filter, map, mergeMap, shareReplay } from 'rxjs/operators';
 import { CoreContext } from '../../core_context';
 import { Logger } from '../../logging';
@@ -86,7 +97,7 @@ function processPluginSearchPaths$(pluginDirs: readonly string[], log: Logger) {
     mergeMap(dir => {
       log.debug(`Scanning "${dir}" for plugin sub-directories...`);
 
-      return fsReadDir$(dir).pipe(
+      return (fsReadDir$(dir) as Observable<string[]>).pipe(
         mergeMap((subDirs: string[]) => subDirs.map(subDir => resolve(dir, subDir))),
         mergeMap(path =>
           fsStat$(path).pipe(

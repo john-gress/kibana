@@ -1,3 +1,14 @@
+//  THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE
+//  This comment only applies to modifications applied after the e633644c43a0a0271e0b6c32c382ce1db6b413c3 commit
+
+//  Copyright 2019 LogRhythm, Inc
+//  Licensed under the LogRhythm Global End User License Agreement,
+//  which can be found through this page: https://logrhythm.com/about/logrhythm-terms-and-conditions/
+
+// THIS FILE WAS CHANGED TO GET THE 7.4.2 BUILD TO WORK.
+// THE NECESSITY OF THESE CHANGES SHOULD BE RE-EVALUATED
+// WHEN UPGRADING TO THE NEXT VERSION
+
 /*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
@@ -25,8 +36,6 @@ import { tap, share, take, mergeMap, map, ignoreElements } from 'rxjs/operators'
 import chalk from 'chalk';
 
 import treeKill from 'tree-kill';
-import { promisify } from 'util';
-const treeKillAsync = promisify(treeKill);
 
 import { ToolingLog } from '../tooling_log';
 import { observeLines } from './observe_lines';
@@ -99,7 +108,7 @@ export function startProc(name: string, options: ProcOptions, log: ToolingLog) {
 
   const outcome$: Rx.Observable<number | null> = Rx.race(
     // observe first exit event
-    Rx.fromEvent(childProcess, 'exit').pipe(
+    Rx.fromEvent<[number]>(childProcess, 'exit').pipe(
       take(1),
       map(([code]: [number]) => {
         if (stopCalled) {
@@ -141,7 +150,16 @@ export function startProc(name: string, options: ProcOptions, log: ToolingLog) {
     await withTimeout(
       async () => {
         log.debug(`Sending "${signal}" to proc "${name}"`);
-        await treeKillAsync(childProcess.pid, signal);
+        await new Promise((res, rej) => {
+          treeKill(childProcess.pid, signal, err => {
+            if (err) {
+              rej(err);
+              return;
+            }
+
+            res();
+          });
+        });
         await outcomePromise;
       },
       STOP_TIMEOUT,
@@ -149,7 +167,16 @@ export function startProc(name: string, options: ProcOptions, log: ToolingLog) {
         log.warning(
           `Proc "${name}" was sent "${signal}" didn't emit the "exit" or "error" events after ${STOP_TIMEOUT} ms, sending SIGKILL`
         );
-        await treeKillAsync(childProcess.pid, 'SIGKILL');
+        await new Promise((res, rej) => {
+          treeKill(childProcess.pid, 'SIGKILL', err => {
+            if (err) {
+              rej(err);
+              return;
+            }
+
+            res();
+          });
+        });
       }
     );
 
