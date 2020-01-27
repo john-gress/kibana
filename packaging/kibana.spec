@@ -23,7 +23,7 @@ rm -rf %{name}
 mkdir %{name}
 cd %{name}
 #extract sources
-tar xzf %_sourcedir/%{name}-%{version}.tar.gz
+tar xf %_sourcedir/%{name}-%{version}.tar
 if [ $? -ne 0 ]; then
    exit $?
 fi
