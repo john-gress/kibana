@@ -11,7 +11,7 @@ export const formatAttachDownload = (value: boolean, field: any, hit: any) => {
 
   const session = hit && hit._source && hit._source.Session ? hit._source.Session : '';
 
-  const fileName = hit && hit._source && hit._source.Filename ? hit._source.Filename : '';
+  const fileName = hit && hit._source && hit._source.FileGenericName ? hit._source.FileGenericName : '';
 
   const captured = hit && hit._source && hit._source.Captured ? true : false;
 
