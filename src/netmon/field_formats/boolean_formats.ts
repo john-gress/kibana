@@ -15,7 +15,7 @@ export const formatAttachDownload = (value: boolean, field: any, hit: any) => {
   // 'fileName' is not a string type. Attempts to pass it with backslashes in the filename will
   // cause typescript to eat the backslashes on the next function call. Instead, toString it and
   // force the backlash to be escaped, so that it is correctly interpreted later
-  const escapedFileName = fileName.toString().replace('\\', '\\\\');
+  const escapedFileName = fileName.toString().replace(/\\/g, '\\\\');
 
   const captured = hit && hit._source && hit._source.Captured ? true : false;
 
