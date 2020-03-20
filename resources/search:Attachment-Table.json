@@ -1,6 +1,6 @@
 {
    "migrationVersion": {
-      "search": "7.0.0"
+      "search": "7.4.0"
    }, 
    "references": [
       {
@@ -12,29 +12,37 @@
          "type": "index-pattern", 
          "id": "361f5c00-b47c-11e9-86a0-cd3d7bf2f81b", 
          "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index"
+      }, 
+      {
+         "type": "index-pattern", 
+         "id": "361f5c00-b47c-11e9-86a0-cd3d7bf2f81b", 
+         "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index"
       }
    ], 
    "search": {
       "sort": [
-         "TimeUpdated", 
-         "desc"
+         [
+            "TimeUpdated", 
+            "desc"
+         ]
       ], 
       "hits": 0, 
       "description": "", 
-      "title": "Attachment Table", 
+      "title": "File Transfer Table", 
       "version": 2, 
       "kibanaSavedObjectMeta": {
-         "searchSourceJSON": "{\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[{\"meta\":{\"negate\":false,\"key\":\"Attach\",\"value\":\"true\",\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"Attach\":{\"query\":true,\"type\":\"phrase\"}}}}],\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+         "searchSourceJSON": "{\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[{\"meta\":{\"negate\":false,\"key\":\"Attach\",\"disabled\":false,\"type\":\"phrase\",\"params\":{\"query\":true},\"alias\":null,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"Attach\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"alias\":null,\"negate\":false,\"disabled\":false,\"type\":\"exists\",\"key\":\"FileGenericName\",\"value\":\"exists\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index\"},\"exists\":{\"field\":\"FileGenericName\"},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\",\"time_zone\":\"America/Denver\"}}},\"highlightAll\":true,\"version\":true,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
       }, 
       "columns": [
+         "Application", 
+         "ApplicationPath", 
+         "SrcIP", 
+         "DestIP", 
+         "Captured", 
          "Attach", 
-         "SenderEmail", 
-         "ReceiverEmail", 
-         "Filename", 
-         "AttachSize", 
-         "AttachType"
+         "FileGenericName"
       ]
    }, 
    "type": "search", 
-   "updated_at": "2019-09-10T15:48:50.528Z"
+   "updated_at": "2020-03-20T19:29:07.785Z"
 }
